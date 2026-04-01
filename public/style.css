@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 :root {
   --color-primary: #3a00ff;
   --color-background-nav: #000;
@@ -29,12 +31,16 @@ svg path {
   fill: #d42257;
   stroke: #000;
 }
+
 svg {
   width: 20px;
   height: 20px;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--color-secondary);
   font-family: var(--font-family);
 }
@@ -46,10 +52,12 @@ ul {
 header {
   display: flex;
 }
+
 header div.container {
   justify-content: center;
   margin: auto;
 }
+
 header div.container h1 {
   font-size: 15em;
   background: linear-gradient(to bottom, var(--color-secondary), var(--color-secondary), var(--color-background-nav), var(--color-background-nav));
@@ -72,6 +80,7 @@ main div.container {
   display: flex;
   overflow: hidden;
 }
+
 main div.container article {
   height: 300px;
   display: inline;
@@ -87,6 +96,7 @@ nav {
   margin: auto;
   width: 50%;
 }
+
 nav ul {
   display: grid;
   width: 100%;
@@ -96,6 +106,7 @@ nav ul {
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 5px;
 }
+
 nav ul li {
   display: grid;
   min-height: -moz-fit-content;
@@ -104,6 +115,7 @@ nav ul li {
   min-width: 30px;
   text-align: center;
 }
+
 nav ul li a {
   text-decoration: none;
   font-family: var(--font-family-bar-menu);
@@ -111,6 +123,7 @@ nav ul li a {
   color: #000;
   font-style: italic;
 }
+
 nav ul li a:hover {
   font-weight: bold;
 }
@@ -125,10 +138,14 @@ footer .container {
   background-color: rgba(0, 0, 0, 0.6862745098);
   color: #EFF1F3;
 }
+
 footer .container p {
   font-size: 12px;
 }
+
 footer .container p a {
   text-decoration: none;
   color: #d42257;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
