@@ -38,7 +38,7 @@
     grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
   }
 
-  .container > :last-child {
+  .container> :last-child {
     margin-bottom: 0;
   }
 }
