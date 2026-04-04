@@ -5,25 +5,35 @@
   --color-background-nav: #000;
   --color-secondary: #d42257;
   --color-background: #eff1f3a2;
-  --color-text: #412d86;
+  --color-text: #1b1d1b;
   --color-light: #fff;
-  --color-anchor: #3a00ff;
+  --color-anchor: #d76609;
   --font-family: "Playfair Display", sans-serif;
   --font-family-bar-menu:  "Lora", courier;
   --font-weight-strong: 500;
-  --font-size-h1: 6rem;
-  --font-size-h2: 3rem;
-  --font-size-h3: 2rem;
-  --font-size-h4: 1.35rem;
-  --font-size-text: 1.15rem;
+  --font-size-h1: 15em;
+  --font-size-h2: 2.5rem;
+  --font-size-h3: 1.85rem;
+  --font-size-h4: 1.70rem;
+  --font-size-text: 1.70rem;
   --border-radius: 8px;
   --piano-menu: 250px;
 }
+.container{
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+} 
 
 html{
     background-image: url("../images/Guitar_Image_Effect_prompt.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+body{
+    margin:0; //Delete web default margin
 }
 
 //STAR SVG STYLING//
@@ -43,22 +53,62 @@ svg{
     color: var(--color-secondary);
 }
 
-h1,h2,h3, h4{
-    color: var(--color-secondary);
-    font-family: var(--font-family)
+h2,h3, h4{
+  /* 1. Define the gradient as a background image */
+  background: linear-gradient(to top, var(--color-secondary) 10%, var(--color-text));
+  
+  /* 2. Clip the background to the text shape */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* 3. Make the actual text transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  
+  /* Optional: Prevents the gradient from spanning the full container width */
+  display: inline-block; 
 }
+h1{font-size: var(--font-size-h1);}
+h2{font-size: var(--font-size-h2);}
+h3{font-size: var(--font-size-h3);}
+h4{font-size: var(--font-size-h4);}
 
 ul{
-      list-style: none;
+    list-style: none;
+}
+.container ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    li{
+        position: relative;
+        padding-left: 28px;
+        margin-left: 10px;
     }
 
+    li::before {
+        max-width: 100%;
+        box-sizing: border-box;
+        content: "";
+        position: absolute;
+        top: 0.4rem;
+        left: 0;
+        width: 20px;
+        height: 30px;
+        background-image: url("../images/icono-viñeta.png");
+        background-size: 18px 15px;
+        background-repeat: no-repeat;
+    }
+} 
+
 header {
+    position: relative;
     display: flex;
     div.container{
         justify-content: center;
         margin: auto;
         h1{
-            font-size: 15em;
             background: linear-gradient(to bottom, var(--color-secondary), var(--color-secondary), var(--color-background-nav), var(--color-background-nav)); 
             -webkit-text-fill-color: transparent; 
             width: 100%;
@@ -81,13 +131,13 @@ article{
 main{
     div.container{
         display: flex;
-        overflow: hidden;
         article{
             height: 300px;
             display: inline;
             padding: 5%;
             overflow-y: scroll;
             margin-left: 15px;
+            background-color:#ffffff66;
         }
     }
 }
@@ -96,10 +146,13 @@ main{
 
 /**NAVBAR STYLING*/
 nav {
-    position:fixed;
     top: 0;
+    position: fixed;
+    display: flex;
     margin: auto;
-    width: 50%;
+    width: 100%;
+    background-color: #EFF1F3;
+    justify-content: center;
     ul{
         display: grid;
         width: 100%;
@@ -107,18 +160,18 @@ nav {
         padding: 0;
         list-style: none;
         grid-template-columns: repeat(6, 1fr);
-        grid-gap: 5px;
+        grid-gap: 0;
 
         li{
             display: grid;
             min-height: fit-content;
             background-color: #ffffffa5;
-            min-width: 30px;
+            min-width: max-content;
             text-align: center;
             a{
                 text-decoration: none;
                 font-family: var(--font-family-bar-menu);
-                font-size: 20px;
+                font-size: 2rem;
                 color: #000;
                 font-style: italic;
                 //writing-mode: vertical-lr;
