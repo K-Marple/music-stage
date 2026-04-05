@@ -1,8 +1,9 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "../sass/block/links";
 :root {
   --color-primary: #3a00ff;
-  --color-background-nav: #000;
+  --color-background-nav: #000000;
   --color-secondary: #d42257;
   --color-background: #eff1f3a2;
   --color-text: #1b1d1b;
@@ -14,7 +15,7 @@
   --font-size-h1: 15em;
   --font-size-h2: 2.5rem;
   --font-size-h3: 1.85rem;
-  --font-size-h4: 1.70rem;
+  --font-size-h4: 0.70rem;
   --font-size-text: 1.70rem;
   --border-radius: 8px;
   --piano-menu: 250px;
@@ -87,7 +88,7 @@ ul{
         margin-left: 10px;
     }
 
-    li::before {
+    li:not(.page-footer li)::before {
         max-width: 100%;
         box-sizing: border-box;
         content: "";
@@ -105,6 +106,9 @@ ul{
 header {
     position: relative;
     display: flex;
+    h2{
+        margin-left: 0;
+    }
     div.container{
         justify-content: center;
         margin: auto;
@@ -183,9 +187,7 @@ nav {
         }
     }  
 }
-//nav:hover{
-//    @include hidden-side-bar();
-//}
+
 ul:nth-child(3){
     margin-left: -20px;
 }
@@ -216,3 +218,7 @@ footer .container{
         font-size: var(--font-size-text);
     }
 }
+#files .container{
+    display: flex;
+}
+/*styling feature class*/

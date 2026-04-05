@@ -1,8 +1,92 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-family: var(--font-family);
+  font-style: italic;
+  font-weight: 100;
+}
+
+.skip-link {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering (if height is set) */
+  position: relative;
+  text-align: center;
+  top: 50px;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+  border-left: solid;
+  border-left-width: 5px;
+  border-color: var(--color-secondary);
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+  font-size: 0.8rem;
+  font-style: italic;
+  font-family: var(--font-family);
+}
+.skip-link:hover, .skip-link:focus {
+  font-size: 1rem;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem var(--color-secondary), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+[class^=link] {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering (if height is set) */
+  text-align: center;
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+  border-left: solid;
+  border-color: var(--color-secondary);
+  border-left-width: 5px;
+  font-size: rem;
+  font-style: italic;
+  font-family: var(--font-family);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+[class^=link]:hover, [class^=link]:focus {
+  transform: translate(-0.15em, -0.15em);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem var(--color-secondary), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+[class^=link]:focus {
+  outline-color: transparent;
+  outline-style: solid;
+}
+
+.page-footer [class^=link] {
+  width: 100%;
+  padding-left: 10%;
+  padding-left: 5%;
+  min-height: 2.5em;
+  display: flex;
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+}
+
+#files .container a {
+  display: flex;
+}
+
+@media (max-width: 400px) {
+  .link-allstyles {
+    margin-left: 6rem;
+  }
+}
+
+.link-github svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.25em;
+  fill: currentColor;
+}
+
 :root {
   --color-primary: #3a00ff;
-  --color-background-nav: #000;
+  --color-background-nav: #000000;
   --color-secondary: #d42257;
   --color-background: #eff1f3a2;
   --color-text: #1b1d1b;
@@ -14,7 +98,7 @@
   --font-size-h1: 15em;
   --font-size-h2: 2.5rem;
   --font-size-h3: 1.85rem;
-  --font-size-h4: 1.70rem;
+  --font-size-h4: 0.70rem;
   --font-size-text: 1.70rem;
   --border-radius: 8px;
   --piano-menu: 250px;
@@ -89,7 +173,7 @@ ul {
   padding-left: 28px;
   margin-left: 10px;
 }
-.container ul li::before {
+.container ul li:not(.page-footer li)::before {
   max-width: 100%;
   box-sizing: border-box;
   content: "";
@@ -106,6 +190,9 @@ ul {
 header {
   position: relative;
   display: flex;
+}
+header h2 {
+  margin-left: 0;
 }
 header div.container {
   justify-content: center;
@@ -203,3 +290,8 @@ footer .container ul {
   align-items: center;
   font-size: var(--font-size-text);
 }
+#files .container {
+  display: flex;
+}
+
+/*styling feature class*//*# sourceMappingURL=style.css.map */
