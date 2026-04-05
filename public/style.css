@@ -270,19 +270,19 @@ article {
 
 main div.container {
   display: flex;
+  margin: 0.5rem;
+  gap: 1rem;
 }
 main div.container article {
   height: 300px;
   display: inline;
   padding: 5%;
   overflow-y: scroll;
-  margin-left: 15px;
   background-color: #ffffff66;
 }
 @media (max-width: 780px) {
   main div.container {
     flex-direction: column;
-    gap: 3rem;
   }
 }
 
