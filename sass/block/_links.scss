@@ -44,7 +44,7 @@ a{
   border-left: solid;
   border-color: var(--color-secondary);
   border-left-width: 5px;
-  font-size: rem;
+  font-size: 0.8rem;
   font-style: italic;
   font-family: var(--font-family);
   margin-top: 20px;
@@ -91,4 +91,12 @@ a{
     margin-right: 0.25em;
     fill: currentColor;
   }
+}
+.page-footer{
+    display: flex;
+    justify-content: right;
+    div.container{
+    width: 50%;
+    font-size: 0.95rem;
+}
 }

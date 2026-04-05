@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "../sass/block/links";
+@import "../sass/block/profile";
+
 :root {
   --color-primary: #3a00ff;
   --color-background-nav: #000000;
@@ -15,12 +17,13 @@
   --font-size-h1: 15em;
   --font-size-h2: 2.5rem;
   --font-size-h3: 1.85rem;
-  --font-size-h4: 0.70rem;
+  --font-size-h4: 1.50rem;
   --font-size-text: 1.70rem;
   --border-radius: 8px;
   --piano-menu: 250px;
 }
 .container{
+margin-top: 5%;
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
@@ -106,12 +109,12 @@ ul{
 header {
     position: relative;
     display: flex;
+    justify-content: center;
     h2{
         margin-left: 0;
     }
     div.container{
-        justify-content: center;
-        margin: auto;
+        
         h1{
             background: linear-gradient(to bottom, var(--color-secondary), var(--color-secondary), var(--color-background-nav), var(--color-background-nav)); 
             -webkit-text-fill-color: transparent; 
@@ -198,3 +201,4 @@ ul:nth-child(3){
     display: flex;
 }
 /*styling feature class*/
+

@@ -1,78 +1,49 @@
-.profile {
-  width: 95vw;
-  max-width: 80ch;
-  margin: 1rem auto 10vh;
-  padding: 1.25rem;
-  z-index: 1;
-
-  h4 {
-    margin: 0;
-    color: var(--color-secondary);
-    text-align: center;
-  }
-
-  .container {
-    display: grid;
-    justify-items: center;
-    grid-gap: 1rem;
-
-    >a {
-      min-height: 2em;
-      border: 2px solid currentColor;
-      color: var(--color-secondary);
-    }
-  }
-
-  ul {
+aside.profile{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    li {
-      display: flex;
-      padding: 0.45em;
-
-      span:nth-child(1) {
-        width: auto;
-        margin-right: 0.25em;
-        font-weight: var(--font-weight-strong);
+    float: right;
+    margin-right: 5%;
+    margin-top: 5%;
+    background-color:#ffffff66;
+    padding: 1rem;
+    ul{
+      display: inline;
+      li{
+        padding-bottom: 10px;
       }
+    }  
 
-      span:nth-child(2) {
-        flex-grow: 1;
-        word-break: break-word;
+}
+ 
+aside.profile{
+    div.container>a{
+          background-color: var(--color-background);
+          color: var(--color-secondary);
+          border-left: solid;
+          border-color: var(--color-secondary);
+          border-left-width: 5px;
+          font-size: 1rem;
+          font-style: italic;
+          font-family: var(--font-family);
+          align-self: center;
+          min-width: 300px;
 
-        a {
-          color: inherit;
-        }
-      }
+          &:hover,
+          &:focus {
+            transform: translate(-0.15em, -0.15em);
+            box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem var(--color-secondary), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+
+          }
+
     }
-  }
-
-  @media (min-width: 180ch) {
-    position: fixed;
-    right: 2vmin;
-    bottom: 2vmin;
-    max-width: 30ch;
-    margin-bottom: 0;
-    border-radius: var(--border-radius);
-    background-color: var(--color-light);
-    box-shadow: 0 2px 5px rgba(color(primary), 0.15);
-
-    ul {
-      justify-content: unset;
-
-      li {
-        padding: 0;
-
-        span:nth-child(1) {
-          width: 8ch;
-          margin-right: 0;
-        }
-      }
+}
+#styles{
+    display: flex;
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 5%;
+    background-color:#ffffff66;
+    padding: 1rem;
+    ul{
+      display: inline;
     }
-  }
 }
