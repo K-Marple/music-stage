@@ -10,8 +10,10 @@ a {
 
 .skip-link {
   display: flex;
-  justify-content: center; /* Horizontal centering */
-  align-items: center; /* Vertical centering (if height is set) */
+  justify-content: center;
+  /* Horizontal centering */
+  align-items: center;
+  /* Vertical centering (if height is set) */
   position: relative;
   text-align: center;
   top: 50px;
@@ -34,15 +36,17 @@ a {
 
 [class^=link] {
   display: flex;
-  justify-content: center; /* Horizontal centering */
-  align-items: center; /* Vertical centering (if height is set) */
+  justify-content: center;
+  /* Horizontal centering */
+  align-items: center;
+  /* Vertical centering (if height is set) */
   text-align: center;
   background-color: var(--color-background);
   color: var(--color-secondary);
   border-left: solid;
   border-color: var(--color-secondary);
   border-left-width: 5px;
-  font-size: 0.8rem;
+  font-size: rem;
   font-style: italic;
   font-family: var(--font-family);
   margin-top: 20px;
@@ -84,21 +88,12 @@ a {
   fill: currentColor;
 }
 
-.page-footer {
-  display: flex;
-  justify-content: center;
-}
-.page-footer div.container {
-  width: 50%;
-  font-size: 0.95rem;
-}
-
 aside.profile {
   display: flex;
   float: right;
   margin-right: 5%;
   margin-top: 5%;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #ffffff66;
   padding: 1rem;
 }
 aside.profile ul {
@@ -130,7 +125,7 @@ aside.profile div.container > a:hover, aside.profile div.container > a:focus {
   width: 30%;
   margin-right: 5%;
   margin-top: 5%;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #ffffff66;
   padding: 1rem;
 }
 #styles ul {
@@ -162,7 +157,8 @@ aside.profile div.container > a:hover, aside.profile div.container > a:focus {
 }
 .container ::-webkit-scrollbar {
   width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  background: transparent;
+  /* make scrollbar transparent */
 }
 
 html {
@@ -175,13 +171,13 @@ body {
   margin: 0;
 }
 
-svg path {
-  fill: #d42257;
-  stroke: #000;
-}
 svg {
   width: 20px;
   height: 20px;
+}
+svg path {
+  fill: #d42257;
+  stroke: #000;
 }
 
 h2, h3, h4 {
@@ -199,6 +195,11 @@ h2, h3, h4 {
 
 h1 {
   font-size: var(--font-size-h1);
+}
+@media (max-width: 780px) {
+  h1 {
+    font-size: 10rem;
+  }
 }
 
 h2 {
@@ -276,7 +277,13 @@ main div.container article {
   padding: 5%;
   overflow-y: scroll;
   margin-left: 15px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #ffffff66;
+}
+@media (max-width: 780px) {
+  main div.container {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 /**NAVBAR STYLING*/
@@ -300,10 +307,8 @@ nav ul {
 }
 nav ul li {
   display: grid;
-  min-height: -moz-fit-content;
   min-height: fit-content;
-  background-color: rgba(255, 255, 255, 0.6470588235);
-  min-width: -moz-max-content;
+  background-color: #ffffffa5;
   min-width: max-content;
   text-align: center;
 }
@@ -313,6 +318,12 @@ nav ul li a {
   font-size: 2rem;
   color: #000;
   font-style: italic;
+}
+@media (max-width: 780px) {
+  nav ul li a {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
 }
 nav ul li a:hover {
   font-weight: bold;
@@ -351,4 +362,4 @@ footer .container ul {
   display: flex;
 }
 
-/*styling feature class*//*# sourceMappingURL=style.css.map */
+/*styling feature class*/

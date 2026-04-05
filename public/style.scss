@@ -72,7 +72,7 @@ h2,h3, h4{
   /* Optional: Prevents the gradient from spanning the full container width */
   display: inline-block; 
 }
-h1{font-size: var(--font-size-h1);}
+h1{font-size: var(--font-size-h1); @media (max-width: 780px) {font-size: 10rem;}}
 h2{font-size: var(--font-size-h2);}
 h3{font-size: var(--font-size-h3);}
 h4{font-size: var(--font-size-h4);}
@@ -146,6 +146,11 @@ main{
             margin-left: 15px;
             background-color:#ffffff66;
         }
+
+        @media (max-width: 780px) {
+            flex-direction: column;
+            gap: 3rem;
+        }
     }
 }
 
@@ -183,6 +188,11 @@ nav {
                 font-style: italic;
                 //writing-mode: vertical-lr;
                 //text-orientation: upright;
+
+                @media (max-width: 780px) {
+                    padding: 0.5rem 0;
+                    font-size: 1rem;
+                }
             }
             a:hover{
                 font-weight: bold;
