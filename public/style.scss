@@ -74,7 +74,7 @@ h2,h3, h4{
   /* Optional: Prevents the gradient from spanning the full container width */
   display: inline-block; 
 }
-h1{font-size: var(--font-size-h1);}
+h1{font-size: var(--font-size-h1); @media (max-width: 780px) {font-size: 10rem;}}
 h2{font-size: var(--font-size-h2);}
 h3{font-size: var(--font-size-h3);}
 h4{font-size: var(--font-size-h4);}
@@ -140,13 +140,18 @@ article{
 main{
     div.container{
         display: flex;
+        margin: 0.5rem;
+        gap: 1rem;
         article{
             height: 300px;
             display: inline;
             padding: 5%;
             overflow-y: scroll;
-            margin-left: 15px;
             background-color:#ffffff66;
+        }
+
+        @media (max-width: 780px) {
+            flex-direction: column;
         }
     }
 }
@@ -163,13 +168,12 @@ nav {
     background-color: #EFF1F3;
     justify-content: center;
     ul{
-        display: grid;
+        display: flex;
         width: 100%;
         margin: auto;
         padding: 0;
         list-style: none;
-        grid-template-columns: repeat(6, 1fr);
-        grid-gap: 0;
+        justify-content: space-evenly;
 
         li{
             display: grid;
@@ -185,6 +189,11 @@ nav {
                 font-style: italic;
                 //writing-mode: vertical-lr;
                 //text-orientation: upright;
+
+                @media (max-width: 780px) {
+                    padding: 0.5rem 0;
+                    font-size: 1rem;
+                }
             }
             a:hover{
                 font-weight: bold;
@@ -233,13 +242,7 @@ footer {
 /*styling feature class*/
 
 @media screen and (max-width: 450px) {
-:root {
-  --font-size-h1: 5em;
-  --font-size-h2: 1.5rem;
-  --font-size-h3: 0.85rem;
-  --font-size-h4: 0.50rem;
-  --font-size-text: 0.70rem;
-}  
+
 body{
     display: inline;
 }
