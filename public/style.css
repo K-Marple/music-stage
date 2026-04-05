@@ -106,11 +106,12 @@ a {
 
 .container ::-webkit-scrollbar {
   width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  background: transparent;
+  /* make scrollbar transparent */
 }
 
 html {
-  background-image: url("../images/Guitar_Image_Effect_prompt.jpg");
+  background-image: url("/images/Guitar_Image_Effect_prompt.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -119,13 +120,13 @@ body {
   margin: 0;
 }
 
-svg path {
-  fill: #d42257;
-  stroke: #000;
-}
 svg {
   width: 20px;
   height: 20px;
+}
+svg path {
+  fill: #d42257;
+  stroke: #000;
 }
 
 h2, h3, h4 {
@@ -181,7 +182,7 @@ ul {
   left: 0;
   width: 20px;
   height: 30px;
-  background-image: url("../images/icono-viñeta.png");
+  background-image: url("/images/icono-viñeta.png");
   background-size: 18px 15px;
   background-repeat: no-repeat;
 }
@@ -223,7 +224,7 @@ main div.container article {
   padding: 5%;
   overflow-y: scroll;
   margin-left: 15px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #ffffff66;
 }
 
 /**NAVBAR STYLING*/
@@ -247,10 +248,8 @@ nav ul {
 }
 nav ul li {
   display: grid;
-  min-height: -moz-fit-content;
   min-height: fit-content;
-  background-color: rgba(255, 255, 255, 0.6470588235);
-  min-width: -moz-max-content;
+  background-color: #ffffffa5;
   min-width: max-content;
   text-align: center;
 }
@@ -270,6 +269,27 @@ ul:nth-child(3) {
 }
 
 /**FOOTER STYLING*/
+footer .container {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, #a2a7ab 30%, #000);
+  color: #EFF1F3;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+footer .container a {
+  text-decoration: none;
+  color: #d42257;
+}
+footer .container p {
+  font-size: 16px;
+}
+footer .container ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: var(--font-size-text);
+}
 #files .container {
   display: flex;
 }
