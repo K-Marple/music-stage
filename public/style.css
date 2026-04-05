@@ -86,7 +86,7 @@ a {
 
 .page-footer {
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 .page-footer div.container {
   width: 50%;
@@ -162,12 +162,11 @@ aside.profile div.container > a:hover, aside.profile div.container > a:focus {
 }
 .container ::-webkit-scrollbar {
   width: 0px;
-  background: transparent;
-  /* make scrollbar transparent */
+  background: transparent; /* make scrollbar transparent */
 }
 
 html {
-  background-image: url("/images/Guitar_Image_Effect_prompt.jpg");
+  background-image: url("./images/Guitar_Image_Effect_prompt.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -176,13 +175,13 @@ body {
   margin: 0;
 }
 
-svg {
-  width: 20px;
-  height: 20px;
-}
 svg path {
   fill: #d42257;
   stroke: #000;
+}
+svg {
+  width: 20px;
+  height: 20px;
 }
 
 h2, h3, h4 {
@@ -277,7 +276,7 @@ main div.container article {
   padding: 5%;
   overflow-y: scroll;
   margin-left: 15px;
-  background-color: #ffffff66;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 /**NAVBAR STYLING*/
@@ -301,8 +300,10 @@ nav ul {
 }
 nav ul li {
   display: grid;
+  min-height: -moz-fit-content;
   min-height: fit-content;
-  background-color: #ffffffa5;
+  background-color: rgba(255, 255, 255, 0.6470588235);
+  min-width: -moz-max-content;
   min-width: max-content;
   text-align: center;
 }
@@ -322,10 +323,12 @@ ul:nth-child(3) {
 }
 
 /**FOOTER STYLING*/
+footer {
+  background: linear-gradient(90deg, #a2a7ab 30%, #000);
+}
 footer .container {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(90deg, #a2a7ab 30%, #000);
   color: #EFF1F3;
   margin-top: 1rem;
   padding: 0 1rem;
@@ -343,6 +346,7 @@ footer .container ul {
   align-items: center;
   font-size: var(--font-size-text);
 }
+
 #files .container {
   display: flex;
 }
