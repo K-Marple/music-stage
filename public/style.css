@@ -297,13 +297,12 @@ nav {
   justify-content: center;
 }
 nav ul {
-  display: grid;
+  display: flex;
   width: 100%;
   margin: auto;
   padding: 0;
   list-style: none;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 0;
+  justify-content: space-evenly;
 }
 nav ul li {
   display: grid;
